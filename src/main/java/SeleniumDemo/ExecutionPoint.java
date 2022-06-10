@@ -4,7 +4,7 @@ public class ExecutionPoint {
 	
 	public static void main(String[] args) {
 		ExecutionPoint ex=new ExecutionPoint();
-		ex.traversingFromDashboard();
+		ex.accessRoleAuto();
 	}
 	
 	public void currencyEnable() {
@@ -21,5 +21,11 @@ public class ExecutionPoint {
 
 		ConfigFileLogin tr = new TraversingFromDashboard();
 		((TraversingFromDashboard) tr).helper1();
+	}
+
+	public void accessRoleAuto(){
+
+		ConfigFileLogin ar = new AccessRoleAuto();
+		((AccessRoleAuto) ar).accessRole();
 	}
 }
