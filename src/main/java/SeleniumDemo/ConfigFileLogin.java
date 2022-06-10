@@ -25,7 +25,9 @@ public abstract class ConfigFileLogin {
 		System.out.println(driver.getCurrentUrl());
 		driver.findElement(By.id("username")).sendKeys("super.admin");
 		driver.findElement(By.id("password")).sendKeys("Secret");
+		driver.findElement(By.id("toggle-password")).click();
 		driver.findElement(By.className("btn-block")).click();
+
 		return driver;
 
 	}

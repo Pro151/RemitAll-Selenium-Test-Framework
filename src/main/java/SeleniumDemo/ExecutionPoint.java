@@ -26,6 +26,10 @@ public class ExecutionPoint {
 	public void accessRoleAuto(){
 
 		ConfigFileLogin ar = new AccessRoleAuto();
-		((AccessRoleAuto) ar).accessRole();
+		try {
+			((AccessRoleAuto) ar).accessRole();
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
 	}
 }
