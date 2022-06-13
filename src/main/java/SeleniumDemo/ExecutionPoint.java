@@ -4,7 +4,9 @@ public class ExecutionPoint {
 	
 	public static void main(String[] args) {
 		ExecutionPoint ex=new ExecutionPoint();
-		ex.accessRoleAuto();
+		//ex.accessRoleAuto();
+		ex.countryConfig();
+
 	}
 	
 	public void currencyEnable() {
@@ -26,10 +28,13 @@ public class ExecutionPoint {
 	public void accessRoleAuto(){
 
 		ConfigFileLogin ar = new AccessRoleAuto();
-		try {
-			((AccessRoleAuto) ar).accessRole();
-		} catch (InterruptedException e) {
-			throw new RuntimeException(e);
-		}
+		((AccessRoleAuto) ar).helper();
+
+	}
+
+	public  void countryConfig(){
+
+		ConfigFileLogin cc = new CountryConfig();
+		((CountryConfig) cc).helperCountry();
 	}
 }
